@@ -10,4 +10,8 @@ class Post extends Model
     use HasFactory;
     protected $table = 'post';
     protected $guarded = ['id'];
+
+    function Produk(){
+        return $this->belongsTo(Produk::class);
+    }
 }
